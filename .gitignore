@@ -1,0 +1,39 @@
+﻿# Build Folders (binaries)
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider settings
+.idea/
+
+# Visual Studio Code settings
+.vscode/
+
+# Mac/Linux specific files
+.DS_Store
+*.DS_Store
+
+# Windows specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of PackageReference
+**/packages/*
+# except build/, which is used as an MSBuild target.
+!**/packages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/packages/repositories.config
+
+# Others
+*.log
+*.vspscc
+*.vssscc
+.vs/
