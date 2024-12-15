@@ -15,44 +15,37 @@
     <link rel="stylesheet" href="~/plugins/overlayScrollbars/css/OverlayScrollbars.min.css" asp-append-version="true">
     <!-- Theme style -->
     <link rel="stylesheet" href="~/css/adminlte.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/plugins/summernote/summernote-bs4.min.css"/>
+    <link rel="stylesheet" href="~/plugins/summernote/summernote-bs4.min.css"/>
+    <link rel="stylesheet" href="~/plugins/codemirror/codemirror.css">
+    <link rel="stylesheet" href="~/plugins/codemirror/theme/monokai.css">
+    <!-- SimpleMDE -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
 </head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
 @Html.Partial("_Navbar")
 @Html.Partial("_Sidebar")
 <div class="content-wrapper">
-    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <div class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
-                        <h1 class="m-0">Dashboard v2</h1>
-                    </div><!-- /.col -->
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard v2</li>
-                        </ol>
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-            </div><!-- /.container-fluid -->
-        </div>
-        <section class="content">
-            <div class="container-fluid">
-                <!-- Info boxes -->
-                <div class="row">
-                    @RenderBody()
+    <section class="content">
+        <div class="container-fluid">
+            <!-- Info boxes -->
+            <div class="row">
+                @RenderBody()
+                <div class="position-absolute bottom-0 start-0 w-100 bg-light py-3 text-center mx-lg-5">
+                    @Html.Partial("Components/_Footer")
                 </div>
             </div>
-        </section>
+        </div>
+        
+    </section>
     </div>
-    
 </div>
 
-</div>
-
-<script src="~/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap -->
 <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- overlayScrollbars -->
@@ -69,9 +62,9 @@
 <!-- ChartJS -->
 <script src="~/plugins/chart.js/Chart.min.js"></script>
 
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+<!-- CodeMirror -->
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

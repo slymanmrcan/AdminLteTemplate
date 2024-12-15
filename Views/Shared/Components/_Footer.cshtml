@@ -1,0 +1,11 @@
+﻿<footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+    </div>
+    <strong>Copyright &copy; <span id="year"></span> <a href="https://adminlte.io"> Coded by Sanan</a>.</strong> All rights reserved.
+</footer>
+<script>
+    var element = document.getElementById("year");
+    var now = new Date();
+    var year = now.getFullYear();
+    element.textContent = year;
+</script>
